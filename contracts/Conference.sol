@@ -1,3 +1,5 @@
+pragma solidity ^0.4.13;
+
 contract Conference {  // can be killed, so the owner gets sent the money in the end
 
 	address public organizer;
