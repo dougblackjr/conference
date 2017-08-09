@@ -18,7 +18,7 @@ contract Conference {  // can be killed, so the owner gets sent the money in the
 
 	function buyTicket() public {
 		if (numRegistrants >= quota) { 
-			throw; // throw ensures funds will be returned
+			revert(); // throw ensures funds will be returned
 		}
 		registrantsPaid[msg.sender] = msg.value;
 		numRegistrants++;
